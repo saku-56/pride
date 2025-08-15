@@ -1,1 +1,9 @@
-<h1 class="text-4xl text-green-700 font-semibold underline">Hello,world</h1>
+<h1>自慢話掲示板</h1>
+
+<% @posts.each do |post| %>
+  <div class="post-item">
+    <div class="post-content"><%= simple_format(post.content) %>
+    </div>
+  </div>
+<% end %>
+
