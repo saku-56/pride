@@ -1,22 +1,11 @@
 <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
   <div class="container mx-auto px-5">
-    <div class="flex justify-between items-center py-4">
-      <!-- ロゴ部分 -->
-      <div class="text-2xl font-bold text-blue-600">
-        <%= link_to "自慢話掲示板", root_path, class: "hover:text-blue-700 transition-colors duration-200" %>
-      </div>
-
-      <!-- デスクトップメニュー -->
-      <nav class="hidden md:block">
-        <ul class="flex items-center space-x-6">
-          <li>
-            <%= link_to "投稿一覧", posts_path, class:'dropdown-item' %>
-          </li>
-          <li>
-            <%= link_to "新規作成", new_post_path, class: 'dropdown-item' %>
-          </li>
-        </ul>
+    <div class="flex justify-end items-center py-4">
+      <!-- ナビゲーションリンク -->
+      <nav>
+        <%= link_to "投稿一覧", posts_path, class: "mr-4" %>
+        <%= link_to "新規作成", new_post_path %>
       </nav>
-     </div>
+    </div>
   </div>
 </header>
