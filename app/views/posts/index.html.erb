@@ -7,6 +7,9 @@
         <div class="text-gray-700 leading-relaxed mb-3">
           <%= simple_format(post.content, class: "whitespace-pre-wrap") %>
         </div>
+       <div class="flex justify-end">
+         <span class="text-sm text-gray-500"><%= post.name %></span>
+       </div>
       </div>
     <% end %>
   </div>
