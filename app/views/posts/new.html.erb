@@ -1,24 +1,30 @@
+<div class="min-h-screen w-full bg-gradient-to-br from-yellow-50 to-amber-100 flex flex-col items-center justify-center p-4">
+  <div class="w-full max-w-3xl mx-auto">
+    <h1 class="text-4xl font-bold text-amber-800 mb-8 text-center">
+      ✨ 自慢話を投稿する ✨
+    </h1>
 
-<div class="container mx-auto px-4 py-8 max-w-3xl">
-  <h1 class="text-3xl font-bold text-center text-gray-900 mb-8">新規作成</h1>
+    <%= form_with model: @post, local: true do |f| %>
+      <div class="bg-white rounded-lg shadow-lg border-2 border-amber-200 p-8 hover:shadow-xl transition-all duration-300">
+        <div class="mb-6">
+          <%= f.label :name, "ハンドルネーム", class: "block text-lg font-semibold text-amber-800 mb-3" %>
+          <%= f.text_field :name,
+            placeholder: "あなたのハンドルネームを入力してください",
+            class: "w-full rounded-lg border-2 border-amber-200 p-4 focus:border-amber-400 focus:ring-2 focus:ring-amber-100 focus:outline-none transition-all duration-200 text-amber-900 bg-amber-50" %>
+        </div>
 
-  <%= form_with model: @post, local: true do |f| %>
-    <div class="bg-white rounded-lg shadow p-6">
-     <div class="mb-6">
-      <%= f.label :name, "ハンドルネーム", class: "block text-sm font-medium text-gray-700 mb-2" %>
-      <%= f.text_field :name,
-        placeholder: "ハンドルネームを入力してください",
-        class: "w-full rounded border border-gray-300 p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-200" %>
+        <div class="mb-8">
+          <%= f.label :content, "自慢話", class: "block text-lg font-semibold text-amber-800 mb-3" %>
+          <%= f.text_area :content,
+              rows: 6,
+              placeholder: "あなたの素敵な自慢話を聞かせてください！どんな小さなことでも大歓迎です✨",
+              class: "w-full rounded-lg border-2 border-amber-200 p-4 focus:border-amber-400 focus:ring-2 focus:ring-amber-100 focus:outline-none transition-all duration-200 text-amber-900 bg-amber-50 leading-relaxed" %>
+        </div>
+
+        <div class="flex justify-center">
+          <%= f.submit "自慢話を投稿する", class: "bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-8 rounded-full border-2 border-amber-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1" %>
+        </div>
       </div>
-    <div class="mb-6">
-      <%= f.label :content, "投稿内容", class: "block text-sm font-medium text-gray-700 mb-2" %>
-      <%= f.text_area :content,
-          rows: 5,
-          placeholder: "あなたの自慢話を入力してください",
-          class: "w-full rounded border border-gray-300 p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-200" %>
-    </div>
-    <div class="flex justify-between items-center">
-        <%= f.submit "投稿", class: "bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors duration-200" %>
-    </div>
-   <% end %>
+    <% end %>
+  </div>
 </div>
