@@ -1,24 +1,8 @@
-# README
+# 自慢話掲示板
+自分の自慢話を投稿する掲示板アプリです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### 課題
+自分の成果や頑張りを誰かに話したくても自分から自慢話をするのは周りの目が気になり言いにくいですが、誰だって自慢したい気持ちはあるはず。
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 目的
+匿名やハンドルネームで自分の自慢を話すことで周りの目を気にせず、自分の成果や頑張りを発信することで自己肯定感を上げる。
